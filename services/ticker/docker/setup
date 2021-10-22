@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+useradd --uid 10011001 --home-dir /home/diamnet --no-log-init diamnet \
+    && mkdir -p /home/diamnet \
+    && chown -R diamnet:diamnet /home/diamnet
+
+mkdir -p /opt/diamnet/bin
+mkdir -p /opt/diamnet/www
+chown -R diamnet:diamnet /opt/diamnet/www
+mkdir -p /opt/diamnet/postgresql/data

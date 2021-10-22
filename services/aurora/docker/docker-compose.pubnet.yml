@@ -1,0 +1,9 @@
+version: '3'
+services:
+  core:
+    volumes:
+      - ./diamnet-core-pubnet.cfg:/diamnet-core.cfg
+  aurora:
+    environment:
+      - HISTORY_ARCHIVE_URLS=https://history.diamnet.org/prd/core-live/core_live_001
+      - NETWORK_PASSPHRASE=Public Global Diamnet Network ; September 2015
